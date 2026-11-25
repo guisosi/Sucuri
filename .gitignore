@@ -1,0 +1,18 @@
+# dependências (recriadas com bun install)
+node_modules
+
+# build do site
+dist
+
+# banco local, cada um tem o seu
+*.sqlite
+
+# segredos nunca vão pro Git (o .env.example pode ir)
+.env
+.env.*
+!.env.example
+
+# logs e lixo do sistema
+*.log
+Thumbs.db
+.DS_Store
