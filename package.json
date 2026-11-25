@@ -1,0 +1,11 @@
+{
+  "name": "quiz-web",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "bun run --filter api --filter web dev",
+    "dev:api": "bun run --filter api dev",
+    "dev:web": "bun run --filter web dev",
+    "banco:popular": "bun run --filter api banco:popular"
+  }
+}

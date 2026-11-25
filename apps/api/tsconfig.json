@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",            // JavaScript moderno
+    "module": "Preserve",          // mantém os imports como estão
+    "moduleResolution": "bundler", // busca módulos como o Bun e o Vite
+    "types": ["bun"],              // reconhece Bun.serve, bun:sqlite...
+    "strict": true,                // checagem rigorosa
+    "noEmit": true,                // só verifica, o Bun roda o .ts direto
+    "skipLibCheck": true           // pula a checagem do node_modules
+  }
+}
