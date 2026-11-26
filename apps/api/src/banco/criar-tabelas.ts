@@ -2,10 +2,11 @@
 import type { Database } from "bun:sqlite";
 
 export function criarTabelas(banco: Database) {
+  // COLLATE NOCASE: "React" e "react" contam como o mesmo tema
   banco.run(`
     CREATE TABLE IF NOT EXISTS temas (
       id   INTEGER PRIMARY KEY AUTOINCREMENT,
-      nome TEXT NOT NULL UNIQUE CHECK (trim(nome) <> '')
+      nome TEXT NOT NULL UNIQUE COLLATE NOCASE CHECK (trim(nome) <> '')
     );
   `);
 
