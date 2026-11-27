@@ -16,6 +16,11 @@ export interface Pergunta {
   correta: number; // 1, 2 ou 3
 }
 
+// Pergunta na listagem de cadastro com o nome do tema
+export interface PerguntaListada extends Pergunta {
+  tema_nome: string;
+}
+
 // Pergunta enviada ao quiz: sem o gabarito
 export type PerguntaQuiz = Omit<Pergunta, "correta">;
 
